@@ -18,7 +18,6 @@ class FormActivity : AppCompatActivity() {
             val email = findViewById<EditText>(R.id.email);
             val password = findViewById<EditText>(R.id.password);
             val passwordTwo = findViewById<EditText>(R.id.passwordTwo);
-
             if (fullname.text.isEmpty() || email.text.isEmpty() || password.text.isEmpty() || passwordTwo.text.isEmpty()) {
                 if (fullname.text.isEmpty()){
                     fullname.error = "Cannot be blank";
@@ -37,7 +36,8 @@ class FormActivity : AppCompatActivity() {
                 password.error = "Passwords do not match";
                 passwordTwo.error = "Passwords do not match";
             }
-            else {
+            if(!fullname.text.isEmpty() && !email.text.isEmpty() && !password.text.isEmpty() && !passwordTwo.text.isEmpty()
+                && password.text.toString().equals(passwordTwo.text.toString()))  {
                 Toast.makeText(
                     getApplicationContext(),
                     "Hi " + fullname.text + "! Welcome to the app.",
