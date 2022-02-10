@@ -7,3 +7,4 @@ If everything is correct it should display a welcome text below
 
 EX:
 
+![image](https://user-images.githubusercontent.com/89527340/153345430-a34c56fa-eb0d-4454-9d33-c1dd022aaff8.png)
